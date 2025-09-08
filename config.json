@@ -63,6 +63,6 @@
         "model": "aura-2-thalia-en"
       }
     },
-    "greeting": "Hello! Welcome to TSSPDCL Consumer Care. Would you like to raise a new complaint or check the status of an existing complaint? If checking status, please have your complaint number ready (digits are easiest)."
+    "greeting": "Hello! Welcome to TSSPDCL Consumer Care. Would you like to raise a new complaint or check the status of an existing complaint?"
   }
 }
