@@ -62,9 +62,12 @@ def create_function_call_response(func_id, func_name, result):
             complaint_no = comp.get("complaint_no", "N/A")
             complaint_id = comp.get("complaint_id", "N/A")
             created = comp.get("created_time", "N/A")
+            estimation_time = comp.get("estimation_time")
             
             # Create a simple, concise response
             content_str = f"Found complaint {complaint_no} with status: {status}. Created: {created[:10] if created != 'N/A' else 'N/A'}"
+            if estimation_time:
+                content_str += f". Estimated resolution: {estimation_time}"
         elif func_name == "raise_complaint":
             complaint_no = result.get("complaint_no", "N/A")
             complaint_id = result.get("complaint_id", "N/A")[:8] + "..." if result.get("complaint_id") else "N/A"
